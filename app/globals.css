@@ -90,6 +90,31 @@
 
 
 
+
+.btn {
+  background: black
+}
+
+.btn:hover {
+  background:rgb(100, 99, 99)
+}
+
+
+
+.info-container {
+  position: relative;
+  top: -120px; 
+}
+
+.circle {
+  position: relative;
+  top: -100px; 
+}
+
+
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

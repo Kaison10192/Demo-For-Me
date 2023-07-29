@@ -1,11 +1,13 @@
-import Navbar from "../app/Navbar";
+import Home from "./component/Home";
+import Navbar from "./component/Navbar";
 
-export default function Home() {
+export default function MainPage() {
   return (
-    <main>
+    <main className="bg-site bg-no-repeat bg-cover overflow-hidden">
       <div>
-        <Navbar />
-        Home
+        <Navbar/>
+        <Home/>
+        <div className='h-[4000px]'></div>
       </div>
     </main>
   );

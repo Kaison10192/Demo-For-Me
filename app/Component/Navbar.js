@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import UserIcon from "./icon/UserIcon";
-import CartIcon from "./icon/CartIcon";
+import UserIcon from "../picture/UserIcon";
+import CartIcon from "../picture/CartIcon";
+import Logo from "../picture/Logo";
+
+
 
 const CustomLink = ({ href, title,}) => {
   return (
@@ -12,15 +15,21 @@ const CustomLink = ({ href, title,}) => {
   );
 };
 
+
+
 const Navbar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav className="flex items-center">
-        <div className="mr-12">Logo</div>
+        <div className="mr-12 ">
+        <Link href='#'>
+          <Logo/>
+        </Link>
+        </div>
         <div className="flex items-centerS">
-          <div className="mx-4 mt-1"><CustomLink href="#" title="Home" /></div>
+          <div className=" mt-1"><CustomLink href="#" title="Home" to='home'/></div>
           <div className="mx-4 mt-1"><CustomLink href="#" title="About"/></div>
-          <button className="bg-black rounded-full text-white h-[36px] w-[150px] mx-12">Shop</button>
+          <button className=" btn rounded-full text-white h-[36px] w-[150px] mx-5" >Shop</button>
         </div>
       </nav>
       <nav className="flex">
@@ -32,7 +41,7 @@ const Navbar = () => {
         <Link href="#" className="mx-4"><CartIcon/></Link>
       </nav>
     </header>
-  );
+  )
 };
 
 export default Navbar;
